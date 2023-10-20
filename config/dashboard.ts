@@ -7,21 +7,20 @@ export const dashboardConfig: DashboardConfig = {
       href: "/docs",
     },
     {
-      title: "Support",
-      href: "/support",
-      disabled: true,
+      title: "Guides",
+      href: "/guides",
     },
   ],
   sidebarNav: [
     {
-      title: "Posts",
+      title: "Dashboard",
       href: "/dashboard",
-      icon: "post",
+      icon: "dashboard",
     },
     {
-      title: "Billing",
-      href: "/dashboard/billing",
-      icon: "billing",
+      title: "Manage",
+      href: "/dashboard/manage",
+      icon: "paint",
     },
     {
       title: "Settings",

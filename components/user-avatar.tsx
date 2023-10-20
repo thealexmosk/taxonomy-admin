@@ -1,5 +1,5 @@
-import { User } from "@prisma/client"
 import { AvatarProps } from "@radix-ui/react-avatar"
+import { User } from "types/next-auth"
 
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Icons } from "@/components/icons"

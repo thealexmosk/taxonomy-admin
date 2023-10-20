@@ -1,9 +1,10 @@
 "use client"
 
 import Link from "next/link"
-import { User } from "next-auth"
 import { signOut } from "next-auth/react"
+import { User } from "types/next-auth"
 
+import { dashboardConfig } from "@/config/dashboard"
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -14,7 +15,7 @@ import {
 import { UserAvatar } from "@/components/user-avatar"
 
 interface UserAccountNavProps extends React.HTMLAttributes<HTMLDivElement> {
-  user: Pick<User, "name" | "image" | "email">
+  user: Pick<User, "name" | "image" | "email" | "role">
 }
 
 export function UserAccountNav({ user }: UserAccountNavProps) {
@@ -38,15 +39,15 @@ export function UserAccountNav({ user }: UserAccountNavProps) {
           </div>
         </div>
         <DropdownMenuSeparator />
-        <DropdownMenuItem asChild>
-          <Link href="/dashboard">Dashboard</Link>
-        </DropdownMenuItem>
-        <DropdownMenuItem asChild>
-          <Link href="/dashboard/billing">Billing</Link>
-        </DropdownMenuItem>
-        <DropdownMenuItem asChild>
-          <Link href="/dashboard/settings">Settings</Link>
-        </DropdownMenuItem>
+        {dashboardConfig.sidebarNav.flatMap((sidebarItem) =>
+          sidebarItem.href ? (
+            <DropdownMenuItem asChild key={sidebarItem.title}>
+              <Link href={sidebarItem.href}>{sidebarItem.title}</Link>
+            </DropdownMenuItem>
+          ) : (
+            []
+          )
+        )}
         <DropdownMenuSeparator />
         <DropdownMenuItem
           className="cursor-pointer"

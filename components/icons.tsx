@@ -17,6 +17,8 @@ import {
   MoreVertical,
   Pizza,
   Plus,
+  LayoutDashboard,
+  Paintbrush2,
   Settings,
   SunMedium,
   Trash,
@@ -44,12 +46,14 @@ export const Icons = {
   add: Plus,
   warning: AlertTriangle,
   user: User,
+  dashboard: LayoutDashboard,
   arrowRight: ArrowRight,
   help: HelpCircle,
   pizza: Pizza,
   sun: SunMedium,
   moon: Moon,
   laptop: Laptop,
+  paint: Paintbrush2,
   gitHub: ({ ...props }: LucideProps) => (
     <svg
       aria-hidden="true"

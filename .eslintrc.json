@@ -6,10 +6,11 @@
     "prettier",
     "plugin:tailwindcss/recommended"
   ],
-  "plugins": ["tailwindcss"],
+  "plugins": ["tailwindcss", "unused-imports"],
   "rules": {
     "@next/next/no-html-link-for-pages": "off",
     "react/jsx-key": "off",
+    "unused-imports/no-unused-imports": "error",
     "tailwindcss/no-custom-classname": "off",
     "tailwindcss/classnames-order": "error"
   },
