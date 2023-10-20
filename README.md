@@ -4,15 +4,9 @@ An open source application built using the new router, server components and eve
 
 ## Features
 
-- New `/app` dir,
-- Routing, Layouts, Nested Layouts and Layout Groups
-- Data Fetching, Caching and Mutation
-- Loading UI
-- Route handlers
-- Metadata files
-- Server and Client Components
+- Next.js `/app` dir,
 - API Routes and Middlewares
-- Authentication using **NextAuth.js**
+- Authentication using **NextAuth.js** and **AWS Cognito**
 - ORM using **Prisma**
 - UI Components built using **Radix UI**
 - Documentation and blog using **MDX** and **Contentlayer**

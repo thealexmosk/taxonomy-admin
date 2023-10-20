@@ -14,12 +14,10 @@ export default function LoginPage() {
       <div className="mx-auto flex w-full flex-col justify-center space-y-6 sm:w-[360px]">
         <div className="flex flex-col space-y-2 text-center">
           <Icons.logo className="mx-auto h-6 w-6" />
-          <h1 className="text-2xl font-semibold tracking-tight">
-            Welcome back
-          </h1>
+          <h1 className="text-2xl font-semibold tracking-tight">Welcome!</h1>
           <p className="text-sm text-muted-foreground">
             Users are created and managed in AWS Cognito by the system
-            administrator
+            administrator.
           </p>
         </div>
         <UserAuthForm />
